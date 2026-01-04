@@ -1,0 +1,51 @@
+pipeline
+A jenkinsfile is a text file that stores workflow as code and it can be cheacked to be scm on our local system
+this enables the devolpers to access,edit and check the code at all times
+the jenkinsfile is written using the groovy DSL and it can be created through a text.groovy editor
+it was written based on two syntaxes 
+Declarative syntax
+scripted pipeline syntax
+
+Declarative Pipeline
+it is a relatively new feature that supprts the pipeline as code concepct
+it makes the code easier to write and read
+this code is written in jenkinsfile which can be checked into a source control management system such as git
+
+pipeline {
+    agent any 
+	stages {
+	   stage ('Build') {
+	       ....
+		   }
+		stage ('Test') {
+		  ...... 
+		  }
+		stage ('QA') {
+		    .....
+		    }
+		stage ('Deploy') {
+		   ...... 
+		   }
+		stage ('monitor') {
+		   .....
+		   }
+	}
+}
+
+it has stages like
+1.pipeline
+this is a user defined block which contains all the processes such as build,test and deploy etc
+it is collection of all the stages in a jenkinsfile
+all the stages and steps are defined within this block
+it is the key block for declarative pipeline syntax
+2.Agent 
+the agent section configures on which nodes the pipeline can be run
+specifying "agent any" means that jenkins will run the job on any of the availble nodes
+3.stages
+this sections is allow to generate differnt stages on our pipeline that will be visulized as differnt segments when the job is run
+4.stage
+at least one "stage" section must be defined on the stage section
+it will contain the work that the pipeline will excute
+5.steps
+The last requried section is "steps" which is defined into a "stage"
+At least one step must be defined in the steps section
