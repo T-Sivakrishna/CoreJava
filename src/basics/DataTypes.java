@@ -1,7 +1,5 @@
 package basics;
 
-import  java.util.*;
-
 public class DataTypes {
 
 	public static void main(String[] args) {
