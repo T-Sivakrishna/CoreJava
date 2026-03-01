@@ -33,7 +33,7 @@ public class SimpleCalculator {
 	        if(!(operation == '+' || operation=='-' || operation == '*' || operation == '/' || operation =='%'))
 	        {
 	            System.out.println("Invalid operation");
-	            return;            
+//	            return;            
 	        }
 	        
 	        System.out.println(operation);
@@ -50,7 +50,7 @@ public class SimpleCalculator {
 	        
 	        if((operation == '/' || operation == '%')&&(num2==0)) {
 	        	System.out.println("Error");
-	        	return;
+//	        	return;
 	        }
 	        
 	        double result=0;
@@ -70,6 +70,7 @@ public class SimpleCalculator {
        }else {
     	   System.out.println(result);   
        }
+       
        input.close();
        
 	}
