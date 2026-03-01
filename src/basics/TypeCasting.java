@@ -19,6 +19,8 @@ public class TypeCasting {
 //		Down Casting (Explicit Conversion)
 		float B=(float)b;
 		System.out.println("B :"+B);
+		
+		input.close();
 	}
 
 }
